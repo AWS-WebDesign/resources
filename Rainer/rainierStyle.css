@@ -32,9 +32,23 @@ h1 {
   text-decoration: none;
 }
 
+.topnav a.wildlife{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-image: url("fox.jpg");
+}
+
 /* Links - change color on hover */
 .topnav a:hover {
   background-color: #ddd;
+  color: black;
+}
+.topnav a.wildlife:hover {
+  background-image: url("fox2.jpg");
   color: black;
 }
 
