@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
     <title>Pizza Order</title>
   </head>
   <body>
@@ -12,9 +13,14 @@
       <br>
 
       <label for="user">Name:</label>
-      <input type="text" name="username" id="user">
+      <input min="0" max="5" type="text" name="username" id="user">
       <br>
-      <input type="number" name="num">
+      <label for="password">Password? </label>
+      <input type="password" name="password" id="password">
+      <br>
+      <br>
+      <label for="numPizza">How many pizzas?</label>
+      <input value="1" min="1" max="30" type="number" name="num" id="numPizza">
       <br>
       <span>Cheese it up??</span>
       <label for="cheese">Yes</label>
@@ -23,7 +29,16 @@
       <input id="cheese2" type="radio" name="NoextraCheese">
         <br>
         <br>
-      Choose your toppings
+
+      <label for="location">Pick your store: </label>
+      <select name="select" id="location">
+        <option name="option1">6th Ave</option>
+        <option name="option2">Downtown</option>
+      </select>
+
+      <br>
+      <p>Choose your toppings:</p>
+      <br>
       <label for="toppings">Pepperoni</label>
       <input id="toppings" type="checkbox" name="toppings1">
       <label for="toppings2">Pineapple</label>
@@ -36,6 +51,8 @@
       <input id="toppings5" type="checkbox" name="toppings5">
       <label for="toppings6">Mushrooms</label>
       <input id="toppings6" type="checkbox" name="toppings6">
+      <br>
+      <input type="submit" value="Submit">
       </center>
     </form>
 
