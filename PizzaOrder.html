@@ -2,12 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style>
+      #results {
+        padding: 50px;
+        display: none;
+        background-color: lightblue;
+        margin-top: 20px;
+        font-size: 18;
+      }
+    </style>
+
 
     <title>Pizza Order</title>
   </head>
   <body>
     <center> <h1>Pizza Order!</h1> </center>
-    <form action="PizzaResults.html" method="post">
+    <form>
       <center>
       <h3>Questions:</h3>
       <br>
@@ -52,9 +62,34 @@
       <label for="toppings6">Mushrooms</label>
       <input id="toppings6" type="checkbox" name="toppings6">
       <br>
-      <input type="submit" value="Submit">
+      <br>
+      <input type="button" value="Submit" onclick="showInput();">
       </center>
     </form>
+
+    <br>
+    <br>
+    <div id="results">
+      <p>Your order, <span id="CustomerName"></span>, is
+        <span id="numP"></span> Pizzas!
+        <br>
+        It costs $<span id="totPrice"></span>
+      </p>
+    </div>
+
+    <script language="JavaScript">
+    function showInput() {
+        document.getElementById('CustomerName').innerHTML =
+                    document.getElementById("user").value;
+        document.getElementById('numP').innerHTML =
+                                document.getElementById("numPizza").value;
+        var r = document.getElementById('results');
+        r.style.display = "block";
+        var price = document.getElementById("numPizza")*10;
+        document.getElementById("totPrice").innerHTML = price;
+
+    }
+    </script>
 
   </body>
 </html>
