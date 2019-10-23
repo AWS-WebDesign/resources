@@ -70,11 +70,17 @@
     <br>
     <br>
     <div id="results">
-      <p>Your order, <span id="CustomerName"></span>, is
-        <span id="numP"></span> Pizzas!
+      <p>Your order,
+        <span id="CustomerName"> Customer person </span>
+        , is
+        <span id="numP"></span>
+         Pizzas!
+        <span id="where"></span>
+
         <br>
         It costs $<span id="totPrice"></span>
       </p>
+
     </div>
 
     <script language="JavaScript">
@@ -85,8 +91,11 @@
                                 document.getElementById("numPizza").value;
         var r = document.getElementById('results');
         r.style.display = "block";
-        var price = document.getElementById("numPizza")*10;
+        var price = document.getElementById("numPizza").value*10;
         document.getElementById("totPrice").innerHTML = price;
+
+        document.getElementById("where").innerHTML =
+                    document.getElementById("location").value;
 
     }
     </script>
