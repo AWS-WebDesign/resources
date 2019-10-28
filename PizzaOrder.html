@@ -71,7 +71,7 @@
     <br>
     <div id="results">
       <p>Your order,
-        <span id="CustomerName"> Customer person </span>
+        <span id="CustomerName"></span>
         , is
         <span id="numP"></span>
          Pizzas!
@@ -79,6 +79,7 @@
 
         <br>
         It costs $<span id="totPrice"></span>
+        Info about your toppings...  <span id="topp"></span>
       </p>
 
     </div>
@@ -96,6 +97,50 @@
 
         document.getElementById("where").innerHTML =
                     document.getElementById("location").value;
+
+        var numTop = 0;
+        if (document.getElementById("toppings").checked)
+        {
+          numTop = numTop + 1;
+        }
+
+        if (document.getElementById("toppings2").checked)
+        {
+
+          numTop = numTop + 1;
+        }
+
+        if (document.getElementById("toppings3").checked)
+        {
+
+          numTop = numTop + 1;
+        }
+
+        if (document.getElementById("toppings4").checked)
+        {
+
+          numTop = numTop + 1;
+        }
+
+        if (document.getElementById("toppings5").checked)
+        {
+
+          numTop = numTop + 1;
+        }
+
+        if (document.getElementById("toppings6").checked)
+        {
+
+          numTop = numTop + 1;
+        }
+
+        if (numTop > 3) {
+
+        document.getElementById('topp').innerHTML = "Woah expensive!"
+        }
+        else {
+          document.getElementById('topp').innerHTML = "Wanna add some more?"
+        }
 
     }
     </script>
