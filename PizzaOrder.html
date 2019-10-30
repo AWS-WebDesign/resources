@@ -10,6 +10,13 @@
         margin-top: 20px;
         font-size: 18;
       }
+      #cheeseButton {
+        background-image: url("cheese.gif");
+        width: 90px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     </style>
 
 
@@ -33,11 +40,8 @@
       <input value="1" min="1" max="30" type="number" name="num" id="numPizza">
       <br>
       <span>Cheese it up??</span>
-      <!--<label for="cheese"> <img src="cheese.gif" width=100 height=80> </label>-->
-      <button id="cheeseButton" onclick="selectCheese()">
-        <img src="cheese.gif" width=100 height=80>
-      </button>
-      <input id="cheese" type="checkbox" name="extraCheese">
+      <label for="cheese"> <img src="cheese.gif" width=100 height=80> </label>
+      <input id="cheese" type="checkbox" name="extraCheese" contenteditable="true">
         <br>
         <br>
 
@@ -86,22 +90,16 @@
     </div>
 
     <script language="JavaScript">
-    function selectCheese() {
-      if (document.getElementById('cheese').checked == false) {
-          document.getElementById('cheese').checked = true;
-      }
-      else {
-        document.getElementById('cheese').checked = false;
-      }
-    }
 
     function showInput() {
+        var r = document.getElementById('results');
+        r.style.display = "block";
+
         document.getElementById('CustomerName').innerHTML =
                     document.getElementById("user").value;
         document.getElementById('numP').innerHTML =
                                 document.getElementById("numPizza").value;
-        var r = document.getElementById('results');
-        r.style.display = "block";
+
         var price = document.getElementById("numPizza").value*10;
         document.getElementById("totPrice").innerHTML = price;
 
