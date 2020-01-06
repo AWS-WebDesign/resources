@@ -16,6 +16,16 @@ h1 {
 
 }
 
+p {
+  text-align: center;
+  font-size: 32px;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  margin: 40px;
+  padding: 45px;
+
+}
+
 /* The navbar container */
 .topnav {
   overflow: hidden;
@@ -56,14 +66,18 @@ h1 {
 .column {
   float: left;
   padding: 10px;
+  overflow: scroll;
+  text-align: center;
 }
 
 .column.side {
   width: 23%;
+  height: 200px;
 }
 
 .column.middle {
   width: 45%;
+  height: 200px;
 }
 
 /* Clear floats after the columns */
